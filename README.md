@@ -7,3 +7,5 @@
 <p> To use the program one must direct their attention to their terminal. after doing so, input this code <code>$ python3 ebay-dl.py 'item name'</code> the item name is whatever you want to search on ebay.</p>
 
 <p> In order to make it a <code>csv</code> file, one must enter another thing to the end of their terminal. This new command will look like <code>$ python3 ebay-dl.py 'item name' --csv=True</code>
+
+<p> Heres a link to the [Project Instructions](https://github.com/mikeizbicki/cmc-csci040/tree/2022fall/project_03)</p>
