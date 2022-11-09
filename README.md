@@ -1,6 +1,6 @@
 # Project-3
 
-<p> The <code>ebay-dl.py</code> file webscrapes the first 10 pages of an ebay search term and returns the name, price, shipping cost, status, if the item has free returns, and how many of the item has been sold. After finding this information, the code will input the data into a <code>json</code> fie or a <code>csv</code> file depending on which one the user wants</p>
+<p> The <code>ebay-dl.py</code> file webscrapes the first 10 pages of an ebay search term and returns the name, price, shipping cost, status, if the item has free returns, and how many of the item has been sold. After finding this information, the code will input the data into a <code>json</code> file or a <code>csv</code> file depending on which one the user wants</p>
 
 ### Use of Program
 
