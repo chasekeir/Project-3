@@ -2,6 +2,7 @@ import argparse
 import requests
 from bs4 import BeautifulSoup
 import json
+import csv
 
 def parse_itemssold(text):
     '''
@@ -66,6 +67,7 @@ def parse_shipping(text):
 parser = argparse.ArgumentParser(description='Download information from ebay and convert it to JSON.')
 parser.add_argument('search_term')
 parser.add_argument('--num_pages', default=10)
+parser.add_argument('--csv', default = False)
 args = parser.parse_args()
 print('args.search_term=', args.search_term)
 
@@ -152,3 +154,10 @@ for page_number in range(1,int(args.num_pages)+1):
 filename = args.search_term+'.json'
 with open(filename, 'w', encoding='ascii') as f:
     f.write(json.dumps(items))
+if args.csv: 
+    keys = list(items[0].keys())
+    filename_csv = args.search_term + '.csv'
+    with open(filename_csv, 'w', encoding = 'utf-8', newline = '') as f:
+        dict_writer = csv.DictWriter(f, keys)
+        dict_writer.writeheader()
+        dict_writer.writerows(items)
